@@ -17,8 +17,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //connect to db
 //connect on compass using mongodb://localhost/user_db
+//`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`
 db.mongoose
-    .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, { 
+    .connect(dbConfig.uri, { 
         useNewUrlParser: true, useUnifiedTopology: true 
     })
     .then(() => {

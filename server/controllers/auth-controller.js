@@ -83,7 +83,7 @@ getMatches = (req, res) => {
         if(err) {
             res.status(500).send({ message: err })
         }
-        if(matches){
+        if(matches !== undefined){
             res.status(200).send({
                 matches: matches[matches.length - 1].matches
             })
