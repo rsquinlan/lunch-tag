@@ -121,6 +121,7 @@ export default class Edit extends Component {
   render() {
     const userList = Array.from(this.state.userList)
     const { currentUser } = this.state
+    console.log(currentUser)
     return (
       <div className="container">
         <header className="jumbotron">
